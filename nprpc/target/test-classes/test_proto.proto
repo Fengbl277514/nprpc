@@ -1,0 +1,25 @@
+syntax = "proto3";// 定义版本
+
+package com.fixbug;//
+
+// 输出的java文件的名称
+option java_outer_classname = "TestProto";
+option java_generic_services = true;
+
+// 定义数据类型
+message LoginRequest {
+  string name = 1;
+  string pwd = 2;
+}
+message RegRequest {
+  string name = 1;
+  string pwd = 2;
+  int32 age = 3;
+  enum SEX {
+    MAN = 0;
+    WOMAN = 1;
+  }
+  SEX sex = 4;
+  string phone = 5;
+}
+
